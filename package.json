@@ -1,7 +1,7 @@
 {
 	"main": "./html/index.html",
 	"name": "simple-text-editor",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"window": {
 		"width": 600,
 		/*"toolbar": false,		*/
