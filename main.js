@@ -4,17 +4,17 @@ var menu = new gui.Menu({ type: 'menubar' });
 // Loads App AutoUpdater
 
 var autoupdater = require('auto-updater.js')({
-        pathToJson: '',
-        async: true,
+				pathToJson: '',
+        async: false,
         silent: false,
         autoupdate: true,
         check_git: true
     });
 
     // State the events
-    autoupdater.on('git-clone',function(){
-      console.log("You have a clone of the repository. Use 'git pull' to be up-to-date");
-    });
+    // autoupdater.on('git-clone',function(){
+    //   console.log("You have a clone of the repository. Use 'git pull' to be up-to-date");
+    // });
     autoupdater.on('check-up-to-date',function(v){
       console.log("You have the latest version: " + v);
     });
