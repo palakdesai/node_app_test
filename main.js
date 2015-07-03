@@ -31,10 +31,10 @@ var autoupdater = require('auto-updater.js')({
       console.log("The Update was already in your folder! It's read for install");
       //autoupdater.forceExtract(); // If autoupdate: false, you'll have to do this manually.
     });
-    autoupdater.on('extracted',function(){
-      console.log("Update extracted successfully!");
-      console.log("RESTART THE APP!");
-    });
+    // autoupdater.on('extracted',function(){
+    //   console.log("Update extracted successfully!");
+    //   console.log("RESTART THE APP!");
+    // });
     // autoupdater.on('download-start',function(name){
     //   console.log("Starting downloading: " + name);
     // });
