@@ -4,7 +4,7 @@ var menu = new gui.Menu({ type: 'menubar' });
 // Loads App AutoUpdater
 
 var autoupdater = require('auto-updater.js')({
-				pathToJson: '',
+	pathToJson: '',
         async: false,
         silent: false,
         autoupdate: true,
@@ -20,16 +20,16 @@ var autoupdater = require('auto-updater.js')({
     });
     autoupdater.on('check-out-dated',function(v_old , v){
       console.log("Your version is outdated. "+v_old+ " of "+v);
-      autoupdater.forceDownloadUpdate(); // If autoupdate: false, you'll have to do this manually.
+      //autoupdater.forceDownloadUpdate(); // If autoupdate: false, you'll have to do this manually.
       // Maybe ask if the'd like to download the update.
     });
     autoupdater.on('update-downloaded',function(){
       console.log("Update downloaded and ready for install");
-      autoupdater.forceExtract(); // If autoupdate: false, you'll have to do this manually.
+      //autoupdater.forceExtract(); // If autoupdate: false, you'll have to do this manually.
     });
     autoupdater.on('update-not-installed',function(){
       console.log("The Update was already in your folder! It's read for install");
-      autoupdater.forceExtract(); // If autoupdate: false, you'll have to do this manually.
+      //autoupdater.forceExtract(); // If autoupdate: false, you'll have to do this manually.
     });
     autoupdater.on('extracted',function(){
       console.log("Update extracted successfully!");
