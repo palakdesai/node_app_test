@@ -35,18 +35,18 @@ var autoupdater = require('auto-updater.js')({
       console.log("Update extracted successfully!");
       console.log("RESTART THE APP!");
     });
-    autoupdater.on('download-start',function(name){
-      console.log("Starting downloading: " + name);
-    });
-    autoupdater.on('download-update',function(name,perc){
-      process.stdout.write("Downloading " + perc + "% \033[0G");
-    });
-    autoupdater.on('download-end',function(name){
-      console.log("Downloaded " + name);
-    });
-    autoupdater.on('download-error',function(err){
-      console.log("Error when downloading: " + err);
-    });
+    // autoupdater.on('download-start',function(name){
+    //   console.log("Starting downloading: " + name);
+    // });
+    // autoupdater.on('download-update',function(name,perc){
+    //   process.stdout.write("Downloading " + perc + "% \033[0G");
+    // });
+    // autoupdater.on('download-end',function(name){
+    //   console.log("Downloaded " + name);
+    // });
+    // autoupdater.on('download-error',function(err){
+    //   console.log("Error when downloading: " + err);
+    // });
     autoupdater.on('end',function(){
       console.log("The app is ready to function");
     });
